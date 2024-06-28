@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 export function Home () {
     const [playerList, setPlayerList] = useState([]);
@@ -17,8 +18,8 @@ export function Home () {
                 <tr>
                     <th scope="col">STT</th>
                     <th scope="col">Tên</th>
-                    <th scope="col">Năm sinh</th>
                     <th scope="col">Vị trí chơi</th>
+                    <th scope="col">Quốc tịch</th>
                 </tr>
                 </thead>
                 <tbody className="table-group-divider">
@@ -26,9 +27,9 @@ export function Home () {
                     <tr key={index}>
                         <th scope="row">{index + 1}
                         </th>
-                        <td>{item.name}</td>
-                        <td>{item.doB}</td>
+                        <td><Link to={'/details/'+item.id}>{item.name}</Link></td>
                         <td>{item.positions.map(position => position.name).join(', ')}</td>
+                        <td>{item.nation.name}</td>
                     </tr>
                 ))}
                 </tbody>

@@ -59,7 +59,6 @@ export function PlayerDetail() {
         height: '400px'
     };
 
-
     const containerStyle = {
         display: 'flex',
         justifyContent: 'space-between',
@@ -75,7 +74,7 @@ export function PlayerDetail() {
                     <p>Nation: {player?.nation?.name}</p>
                     <p>Height: {player.height} cm</p>
                     <p>Weight: {player.weight} kg</p>
-                    <p>Salary: ${player.salary}</p>
+                    <p>Salary: {player.salary}</p>
                     <p>Profile: {player.profile ? player.profile : 'N/A'}</p>
                     <p>Date of Birth: {player.doB}</p>
                 </div>

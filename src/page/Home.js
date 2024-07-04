@@ -27,7 +27,7 @@ export function Home () {
                     <tr key={index}>
                         <th scope="row">{index + 1}
                         </th>
-                        <td><Link to={'/details/'+item.id}>{item.name}</Link></td>
+                        <td><Link to={'/player/details/'+item.id}>{item.name}</Link></td>
                         <td>{item.positions.map(position => position.name).join(', ')}</td>
                         <td>{item.nation.name}</td>
                     </tr>
